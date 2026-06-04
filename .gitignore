@@ -1,0 +1,50 @@
+# --------------------------------------------------------------------------- #
+# Large / generated / non-redistributable files are kept out of the repo.
+# Everything here is reproducible by downloading the dataset and running the
+# scripts (see README.md). Nothing in here is required to read the code.
+# --------------------------------------------------------------------------- #
+
+# Raw dataset (MD-AS-2025) — ~4 GB, download from Zenodo into data/raw/
+data/raw/
+
+# Generated intermediates — memory banks, embeddings, caches (~2 GB)
+data/processed/
+
+# Model weights / checkpoints (DINOv3 & ResNet pull from the timm HF mirror;
+# YOLO writes yolov8n.pt). Do NOT commit weights.
+weights/
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+
+# Heavy generated results — figures, heatmaps, attention/t-SNE images.
+# CSV tables and run logs ARE kept (they document the reported numbers).
+results/figures/
+results/heatmaps/
+results/attention/
+results/tsne/
+results/failure_cases/
+runs/
+
+# Literature PDFs (copyrighted papers — keep the .md notes, not the PDFs)
+Literature/*.pdf
+
+# Proposal / presentation binaries
+*.docx
+*.pptx
+*.pdf
+*.zip
+*.rar
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.DS_Store

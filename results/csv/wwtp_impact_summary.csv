@@ -1,0 +1,4 @@
+scenario,action_day,violation_days,cumulative_excess_TSS_mgL_days,days_in_bulking,peak_SVI,peak_eff_TSS,total_energy_kWh,energy_cost_usd,compliance_penalty_usd,total_operating_cost_usd
+WITHOUT anomaly detection (reactive),34,4,7.5,12,186.7,32.6,99196.0,11904.0,2000.0,13904.0
+WITH anomaly detection (proactive),24,0,0.0,0,137.5,18.0,96186.0,11542.0,0.0,11542.0
+IMPROVEMENT (with - without),-10,-4,-7.5,-12,-49.2,-14.6,-3010.0,-362.0,-2000.0,-2362.0

@@ -1,0 +1,51 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+train(healthy)=1509  test=2154 (healthy=647, stressed=1507)
+
+=== backbone: dinov3 ===
+    train batch 20: pooled=40000 (20s)
+    train batch 40: pooled=40000 (43s)
+    train batch 60: pooled=40000 (65s)
+    train batch 80: pooled=40000 (87s)
+    memory bank: 5000 x 384 (from pool 40000)
+    test batch 30/135 (36s)
+    test batch 60/135 (71s)
+    test batch 90/135 (107s)
+    test batch 120/135 (143s)
+    feature+score time: 372s
+    AUROC=0.7906  AP=0.8986  bestF1=0.7607
+    [dinov3 CLS-kNN baseline] AUROC=0.7809
+
+=== backbone: randvit ===
+    train batch 20: pooled=40000 (23s)
+    train batch 40: pooled=40000 (45s)
+    train batch 60: pooled=40000 (68s)
+    train batch 80: pooled=40000 (91s)
+    memory bank: 5000 x 384 (from pool 40000)
+    test batch 30/135 (28s)
+    test batch 60/135 (63s)
+    test batch 90/135 (93s)
+    test batch 120/135 (136s)
+    feature+score time: 373s
+    AUROC=0.5263  AP=0.7358  bestF1=0.4418
+
+=== backbone: resnet50 ===
+    train batch 20: pooled=40000 (25s)
+    train batch 40: pooled=40000 (46s)
+    train batch 60: pooled=40000 (67s)
+    train batch 80: pooled=40000 (86s)
+    memory bank: 5000 x 1536 (from pool 40000)
+    test batch 30/135 (41s)
+    test batch 60/135 (78s)
+    test batch 90/135 (113s)
+    test batch 120/135 (146s)
+    feature+score time: 364s
+    AUROC=0.5914  AP=0.7828  bestF1=0.5651
+
+==== SUMMARY ====
+backbone          method    auroc       ap  best_f1  bank_size  feat_dim
+  dinov3 patchcore_patch 0.790648 0.898585 0.760700       5000       384
+  dinov3         cls_knn 0.780921 0.893960      NaN       1509       384
+ randvit patchcore_patch 0.526257 0.735791 0.441759       5000       384
+resnet50 patchcore_patch 0.591365 0.782765 0.565125       5000      1536
+
+wrote metrics_summary.csv, per_taxon_auroc.csv, threshold_metrics.csv, per-image scores, ROC curves, memory banks

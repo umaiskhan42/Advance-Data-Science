@@ -1,0 +1,20 @@
+# Python 3.10–3.13. Install with:  pip install -r requirements.txt
+# A CUDA GPU is optional — the anomaly-detection pipeline runs CPU-only.
+
+# --- core numerics / IO ---
+numpy
+pandas
+scikit-learn
+Pillow
+matplotlib
+
+# --- deep learning ---
+torch            # CPU build is fine; for CUDA see https://pytorch.org/get-started/locally/
+timm             # provides the frozen DINOv3 ViT-S/16 and ResNet-50 backbones
+
+# --- object-detection baseline (scripts/od_02_train_eval.py) ---
+ultralytics      # YOLOv8 reproduction; pulls in torchvision
+
+# --- optional ---
+umap-learn       # UMAP embedding plots (t-SNE is used if this is missing)
+python-docx      # only for scripts/make_proposal_docx.py (regenerates the proposal)

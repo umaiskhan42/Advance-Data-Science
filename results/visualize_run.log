@@ -1,0 +1,19 @@
+[01] embedding plots (t-SNE / UMAP)
+  running t-SNE ...
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1779523827.113924   43936 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1779523838.657662   43936 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+  running UMAP ...
+C:\Users\Umais\miniconda3\Lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+[02] attention maps
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  attention overlays -> D:\CourseWork\Semester3\ADS\Project\results\attention
+[03] anomaly heatmaps
+  anomaly heatmaps -> D:\CourseWork\Semester3\ADS\Project\results\heatmaps
+[04] failure cases
+  failure cases -> D:\CourseWork\Semester3\ADS\Project\results\failure_cases (FP=158, FN=485, threshold=0.608)
+[05] comparison figures
+  comparison figures -> D:\CourseWork\Semester3\ADS\Project\results\figures
+done.

@@ -1,0 +1,7 @@
+taxon,group,n_available,n_selected,n_train,n_test
+Hypotrichida,healthy,556.0,556.0,389.0,167.0
+Digononta,healthy,4780.0,800.0,560.0,240.0
+Monogononta,healthy,1207.0,800.0,560.0,240.0
+Arcellinida,stressed,7007.0,800.0,0.0,800.0
+Nematoda,stressed,707.0,707.0,0.0,707.0
+TOTAL,,14257.0,3663.0,1509.0,2154.0
